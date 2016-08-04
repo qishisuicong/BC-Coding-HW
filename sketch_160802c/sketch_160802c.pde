@@ -8,6 +8,7 @@ int b = 0;
 void setup() {
   size(500, 500);
   background(255);
+  textSize(23);
 }
 void draw() {
   background(255);
@@ -31,6 +32,50 @@ void draw() {
     (mouseY>170) && (mouseY<230)) {
     quad(50, 155, 40, 230, 150, 170, 150, 250);
   } 
+  if ((mouseX>170) && (mouseX<230)&&//same as above
+    (mouseY>170) && (mouseY<230)) {
+    arc(200, 200, 80, 80, 0, PI+QUARTER_PI, PIE);
+  } 
+  if ((mouseX>270) && (mouseX<330)&&//same as above
+    (mouseY>170) && (mouseY<230)) {
+    triangle(300, 155, 260, 265, 360, 233);
+  }
+  if ((mouseX>370) && (mouseX<430)&&//same as above
+    (mouseY>170) && (mouseY<230)) {
+    quad(350, 215, 350, 218, 475, 185, 475, 182);
+  }
+  if ((mouseX>70) && (mouseX<130)&&//same as above
+    (mouseY>270) && (mouseY<330)) {
+    text("Hello", 72, 310);
+  }
+  if ((mouseX>170) && (mouseX<230)&&//same as above
+    (mouseY>270) && (mouseY<330)) {
+    text("Click", 172, 310);
+  }
+  if ((mouseX>270) && (mouseX<330)&&//same as above
+    (mouseY>270) && (mouseY<330)) {
+    text("To", 287, 310);
+  }
+  if ((mouseX>370) && (mouseX<430)&&//same as above
+    (mouseY>270) && (mouseY<330)) {
+    text("Change", 360, 310);
+  }
+  if ((mouseX>70) && (mouseX<130)&&//same as above
+    (mouseY>370) && (mouseY<430)) {
+    text("The", 80, 410);
+  }
+  if ((mouseX>170) && (mouseX<230)&&//same as above
+    (mouseY>370) && (mouseY<430)) {
+    text("Background", 135, 410);
+  }
+  if ((mouseX>270) && (mouseX<330)&&//same as above
+    (mouseY>370) && (mouseY<430)) {
+    text("Color", 270, 410);
+  }
+  if ((mouseX>370) && (mouseX<430)&&//same as above
+    (mouseY>370) && (mouseY<430)) {
+    text("Yeah", 373, 410);
+  }
   for (a=0; a<(width-100); a+=100) {//a for loop for drawing the all 16 circles
     for (b=0; b<(height-100); b+=100) {
       ellipse(a+100, b+100, 60, 60);
