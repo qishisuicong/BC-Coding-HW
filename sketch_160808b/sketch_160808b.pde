@@ -87,12 +87,12 @@ void draw() {
   }
   for (a=0; a<(width-100); a+=100) {//a for loop for drawing the all 16 circles
     for (b=0; b<(height-100); b+=100) {
-      triangle(a+100,40, b+50,60,30, 0);
+      triangle(a+100, 100, b+200, 0, 0, 0);
     }
   }
   for (a=0; a<(width-100); a+=100) {//a for loop for drawing the all 16 circles
     for (b=0; b<(height-100); b+=100) {
-      triangle(a+100,500, b+50,60,30, 0);
+      triangle(a+100,400, b+200,500,0, 500);
     }
   }
 
