@@ -22,7 +22,6 @@ void setup() {
 }
 
 void draw() {
-  print(state);
   if (state == 0) {
     image(start, 0, 0, 500, 500);
   }
