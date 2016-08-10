@@ -4,10 +4,17 @@ int z = 0;
 int h = 0;
 int a = 0;
 int b = 0;
+PVector position, position2, position3, position4, velocity;
 void setup() {
+  frameRate(2);
   size(500, 500);
   background(255);
   textSize(23);
+  position = new PVector(0, 100);
+  position2 = new PVector(0, 200);
+  position3 = new PVector(0, 300);
+  position4 = new PVector(0, 400);
+  velocity = new PVector(10, 0);
 }
 void draw() {
   background(255);
@@ -93,6 +100,22 @@ void draw() {
   for (a=0; a<(width-100); a+=100) {//a for loop for drawing the all 16 circles
     for (b=0; b<(height-100); b+=100) {
       triangle(a+100, 400, b+200, 500, 0, 500);
+    }
+    position.add(velocity);
+    position2.add(velocity);
+    position3.add(velocity);
+    position4.add(velocity);
+    if (position.x<=500) {
+      rect(position.x, position.y, 30, 30);
+    }
+    if (position2.x<=500) {
+      rect(width-position2.x, position2.y, 30, 30);
+    }
+    if (position3.x<=500) {
+      rect(position3.x, position3.y, 30, 30);
+    }
+    if (position4.x<=500) {
+      rect(width-position4.x, position4.y, 30, 30);
     }
   }
 
